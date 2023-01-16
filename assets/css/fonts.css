@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Lancelot";
+    src: url("/assets/fonts/lancelot/lancelot-regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Kodchasan";
+    src: url("/assets/fonts/kodchasan/kodchasan-regular.ttf") format("truetype");
+}
