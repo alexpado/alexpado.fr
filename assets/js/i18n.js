@@ -92,6 +92,8 @@ export default class I18N {
         this.selectedLanguage = shortCode;
         const activeTranslationMap = translations[shortCode];
 
+        localStorage.setItem('language', this.selectedLanguage);
+
         // Rendering
         document.querySelectorAll('[data-i18n]').forEach(node => {
             const key = node.dataset.i18n;
@@ -124,5 +126,6 @@ export default class I18N {
 
 (() => {
     const i18n = new I18N();
-    i18n.translate('en');
+    const defaultLanguage = localStorage.getItem('language') ?? 'en';
+    i18n.translate(defaultLanguage);
 })()
