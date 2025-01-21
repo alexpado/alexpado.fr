@@ -14,9 +14,11 @@
     <meta property="og:description" content="I'm a French Software Engineer doing my job during the day, and coding what I like during the night; ranging from website to discord bots.">
 
     <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/globals.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script defer src="assets/js/feather.min.js"></script>
     <script defer src="assets/js/script.js"></script>
+    <script defer type="module" src="assets/js/i18n.js"></script>
 
     <!--
  /\                 /\
@@ -29,7 +31,7 @@
  Oh, hi there ! Did you see that ?
  A website without a JS framework !
 
- ... Oh, did I interrupted you ?
+ ... Oh, did I interrupt you ?
  I'm sorry, please continue your tour :D
 
  Have a great day !
@@ -37,26 +39,180 @@
 </head>
 <body>
 
-<div id="content">
+<div id="language-switcher"></div>
+
+<section id="landing" class="full-section">
+
     <div id="effect">
         <div class="flash"></div>
         <div class="overlay"></div>
     </div>
-    <section id="hello">
-        <h1 class="short-name">alexpado</h1>
-        <p class="title">French Software Engineer</p>
 
-        <div class="socials">
-            <a class="social-container github" href="https://github.com/alexpado" target="_blank">
-                <i data-feather="github"></i>
-            </a>
-        </div>
+    <div class="section-background fill-parent"></div>
 
-        <div class="notice">
-            <span>I'll add content here later... <span class="im-lazy">when I'll stop being lazy, of course</span></span>
+    <a href="https://unsplash.com/fr/photos/route-vide-qi2hmCwlhcE" class="clickable credits flex flex-center flex-row" target="_blank"><i data-feather="camera"></i>
+        Andre Benz @ unsplash</a>
+
+    <div class="section-content fill-parent flex flex-center">
+        <h1 data-i18n="landing.header.name" class="text"></h1>
+        <h2 data-i18n="landing.header.title"></h2>
+
+        <div class="flex flex-row socials flex-center">
+            <a class="social clickable" href="https://www.linkedin.com/in/alex-pado/" target="_blank"><i data-feather="linkedin"></i></a>
+            <a class="social clickable" href="https://github.com/alexpado" target="_blank"><i data-feather="github"></i></a>
+            <a class="social clickable" href="mailto:contact@alexpado.fr" target="_blank"><i data-feather="mail"></i></a>
         </div>
-    </section>
-</div>
+    </div>
+</section>
+
+<section id="intro" class="section flex section-light">
+    <h2 class="section-title" data-i18n="intro.title"></h2>
+
+    <div class="split-view">
+        <div class="view left-view flex">
+            <p class="justify" data-i18n="intro.description.p1"></p>
+            <p class="justify" data-i18n="intro.description.p2"></p>
+            <p class="justify" data-i18n="intro.description.p3"></p>
+        </div>
+        <div class="view right-view grid">
+            <div class="grid-item flex flex-center">
+                <img src="assets/img/stacks/discord.svg" alt="" />
+                <p>Discord</p>
+            </div>
+            <div class="grid-item flex flex-center">
+                <img src="assets/img/stacks/springboot.svg" alt="" />
+                <p>Springboot</p>
+            </div>
+            <div class="grid-item flex flex-center">
+                <img src="assets/img/stacks/electron.svg" alt="" />
+                <p>Electron</p>
+            </div>
+            <div class="grid-item flex flex-center">
+                <img src="assets/img/stacks/laravel.svg" alt="" />
+                <p>Laravel</p>
+            </div>
+            <div class="grid-item flex flex-center">
+                <img src="assets/img/stacks/docker.svg" alt="" />
+                <p>Docker</p>
+            </div>
+            <div class="grid-item flex flex-center">
+                <img src="assets/img/stacks/android.svg" alt="" />
+                <p>Android</p>
+            </div>
+            <div class="grid-item flex flex-center">
+                <img src="assets/img/stacks/vuejs.svg" alt="" />
+                <p>VueJS</p>
+            </div>
+            <div class="grid-item flex flex-center">
+                <img src="assets/img/stacks/mariadb.svg" alt="" />
+                <p>MariaDB</p>
+            </div>
+            <div class="grid-item flex flex-center">
+                <img src="assets/img/stacks/figma.svg" alt="" />
+                <p>Figma</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="works" class="section flex section-dark">
+    <h2 class="section-title" data-i18n="works.title"></h2>
+    <article class="project flex">
+        <h3 class="project-name">Anisekai</h3>
+        <div class="tags flex flex-row">
+            <span class="tag tag-green" data-i18n="works.tags.extension"></span>
+            <span class="tag tag-green">Springboot</span>
+            <span class="tag tag-green">MariaDB</span>
+            <span class="tag tag-purple">HTML</span>
+            <span class="tag tag-purple">CSS</span>
+            <span class="tag tag-purple">Javascript</span>
+            <span class="tag tag-purple">Java</span>
+            <span class="tag tag-orange">Figma</span>
+            <span class="tag tag-orange">Docker</span>
+        </div>
+        <p class="project-summary" data-i18n="works.projects.anisekai"></p>
+        <div class="actions">
+            <a href="https://github.com/anisekai-project/anisekai-service" target="_blank" class="action action-github">Github</a>
+        </div>
+    </article>
+
+    <article class="project flex">
+        <h3 class="project-name">Camera Viewer App</h3>
+        <div class="tags flex flex-row">
+            <span class="tag tag-green">Electron</span>
+            <span class="tag tag-green">NodeJS</span>
+            <span class="tag tag-purple">HTML</span>
+            <span class="tag tag-purple">CSS</span>
+            <span class="tag tag-purple">Javascript</span>
+            <span class="tag tag-orange">Figma</span>
+        </div>
+        <p class="project-summary" data-i18n="works.projects.cva"></p>
+        <div class="actions">
+            <a href="https://github.com/alexpado/camera-viewer-app" target="_blank" class="action action-github">Github</a>
+        </div>
+    </article>
+
+    <article class="project flex">
+        <h3 class="project-name">Genshin Wish Calculator</h3>
+        <div class="tags flex flex-row">
+            <span class="tag tag-purple">HTML</span>
+            <span class="tag tag-purple">CSS</span>
+            <span class="tag tag-purple">Javascript</span>
+            <span class="tag tag-orange">Figma</span>
+            <span class="tag tag-orange">Docker</span>
+        </div>
+        <p class="project-summary" data-i18n="works.projects.gwc"></p>
+        <div class="actions">
+            <a href="https://github.com/alexpado/genshin-wish-calculator" target="_blank" class="action action-github">Github</a>
+            <a href="https://gwc.akio.ovh/#/" target="_blank" class="action action-website" data-i18n="works.actions.website-en"></a>
+        </div>
+    </article>
+
+    <article class="project flex">
+        <h3 class="project-name">Pixiv Companion</h3>
+        <div class="tags flex flex-row">
+            <span class="tag tag-green" data-i18n="works.tags.extension"></span>
+            <span class="tag tag-purple">HTML</span>
+            <span class="tag tag-purple">CSS</span>
+            <span class="tag tag-purple">Javascript</span>
+            <span class="tag tag-orange">Figma</span>
+        </div>
+        <p class="project-summary" data-i18n="works.projects.pixiv"></p>
+        <div class="actions">
+            <a href="https://github.com/alexpado/pixiv-companion" target="_blank" class="action action-github">Github</a>
+        </div>
+    </article>
+</section>
+
+<section id="hobbies" class="section flex section-light">
+    <h2 class="section-title" data-i18n="hobbies.title"></h2>
+    <p class="justify" data-i18n="hobbies.description.p1"></p>
+    <p class="justify" data-i18n="hobbies.description.p2"></p>
+    <p class="justify" data-i18n="hobbies.description.p3"></p>
+</section>
+
+<section id="contact" class="section flex section-dark">
+    <h2 class="section-title" data-i18n="contact.title"></h2>
+
+
+    <div class="split-view">
+        <div class="view left-view flex contact-details">
+            <a href="tel://+33781384772" target="_blank" class="contact-detail phone"><i data-feather="phone"></i><span>(+33) 07 81 38 47 72</span></a>
+            <a href="mailto:contact@alexpado.fr" target="_blank" class="contact-detail mail"><i data-feather="mail"></i><span>contact@alexpado.fr</span></a>
+            <a href="https://github.com/alexpado" target="_blank" class="contact-detail github"><i data-feather="github"></i><span>alexpado</span></a>
+            <a href="https://www.linkedin.com/in/alex-pado/" target="_blank" class="contact-detail linkedin"><i data-feather="linkedin"></i><span>Alexandre Padovan</span></a>
+            <a href="https://www.google.fr/maps/place/02100+Saint-Quentin" target="_blank" class="contact-detail map"><i data-feather="map-pin"></i><span>02100 Saint-Quentin</span></a>
+            <a href="#" class="contact-detail cv" data-i18n="contact.download-cv"></a>
+        </div>
+        <div class="view right-view map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41163.6875858183!2d3.2377846962599763!3d49.84752164954611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e8186188e01cc5%3A0x40af13e8169d440!2s02100%20Saint-Quentin!5e0!3m2!1sen!2sfr!4v1737418061465!5m2!1sen!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<footer class="section flex section-light">
+    <p data-i18n="footer.signature"></p>
+</footer>
 
 </body>
 </html>

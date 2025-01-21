@@ -1,102 +1,109 @@
+:root {
+    --primary-color: #0079C3;
+    --secondary-color: #5BC300;
+
+    --dark-background: #111316;
+    --light-background: #1D2227;
+
+    --font-color: #C9C9C9;
+    --emphasis-color: #FFFFFF;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
-html, body, #content {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+body {
+    background-color: var(--light-background);
+    color: var(--font-color);
 }
 
-body {
-    font-family: Lancelot, sans-serif;
-    background-color: black;
-    color: white;
+.credits {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    gap: 1em;
 
+    font-size: 1em;
+    padding: 0 2em;
+    border-radius: 6px;
+    z-index: 3;
+}
+
+#landing .section-background {
     background-image: url('../img/background.webp');
     background-size: cover;
     background-position: center;
-}
 
-#content {
     display: flex;
-    flex-direction: column;
-    /*background-color: rgba(29, 34, 59, 0.4);*/
+    align-items: flex-end;
 }
 
-#hello {
+#landing .section-content {
     z-index: 2;
-    margin: auto;
+}
+
+#landing .socials a {
+    color: var(--emphasis-color);
+}
+
+#intro .left-view {
+    gap: 1.5em;
+    line-height: 2.5em;
+
+    justify-content: center;
+}
+
+#intro .grid-item img {
+    max-width: 100px;
+}
+
+#works .project {
+    padding: 1em 2em;
+    border-left: 6px solid var(--light-background);
+}
+
+#works .actions {
+    margin-top: 1em;
+}
+
+#works .action, #contact .action, .panic-button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--emphasis-color);
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    font-weight: bold;
     text-align: center;
 }
 
-#hello .short-name {
-    font-size: 5em;
-    font-family: "Kodchasan", sans-serif;
-    margin-bottom: 0.75rem;
+.panic-button {
+    margin-top: 2em;
 }
 
-#hello .title {
-    font-size: 2.6em;
-    letter-spacing: 1px;
-    margin-bottom: 0.75rem;
-}
-
-#hello .socials {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0.75rem;
-}
-
-#hello .socials a {
-    display: flex;
-    color: #df7701;
-    border-radius: 55px;
-    height: 58px;
-    width: 58px;
-    background-color: rgba(29, 34, 59, 0.7);
-
-    transition: color .25s ease-in-out, background-color .25s ease-in-out;
-}
-
-#hello .socials a:hover {
+.panic-button:hover {
+    font-weight: bold;
     color: white;
-    background-color: rgba(29, 34, 59, 1);
 }
 
-#hello .socials a svg {
-    margin: auto;
+#works .action.action-website {
+    background-color: var(--light-background);
 }
 
-#hello .notice {
-    font-size: 1.25em;
+#contact .cv {
+    color: white;
+    background-color: var(--primary-color);
+    justify-content: center;
 }
 
-#hello .im-lazy {
-    opacity: 0.8;
-    font-style: italic;
-    font-size: 1rem;
+#contact .map iframe {
+    width: 100%;
+    height: 100%;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
+footer {
+    text-align: center;
 }
 
 #effect {
@@ -149,6 +156,14 @@ body {
 #effect.enabled .flash {
     opacity: 1;
 }
+
 #effect.enabled .overlay {
-     opacity: 1;
- }
+    opacity: 1;
+}
+
+#language-switcher {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    z-index: 100;
+}
