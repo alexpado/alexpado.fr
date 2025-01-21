@@ -16,6 +16,12 @@ const nightSettings = {
         flash.style.setProperty('--mouse-y', `${e.pageY}px`);
     });
 
+    const maxScroll = 250;
+    window.addEventListener('scroll', event => {
+        const opacity = Math.max((maxScroll - window.scrollY) / maxScroll, 0);
+        document.getElementById('scroll-indicator').style.opacity = `${opacity}`;
+    })
+
     const setNight = (isNight) => {
         if (isNight) {
             flash.classList.add('enabled');
