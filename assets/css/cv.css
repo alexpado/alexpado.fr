@@ -39,7 +39,7 @@ body, p, .text {
 .background {
     position: absolute;
     top: -50px;
-    height: 360px;
+    height: 325px;
     left: -30%;
     right: -30%;
     background-color: var(--x-primary-color);
@@ -86,23 +86,28 @@ header.split-view {
     gap: 0;
 }
 
+header.split-view .left-view {
+    flex: 2;
+}
+
+header.split-view .right-view {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
 header .header-block {
     margin-top: 1.5em;
 }
 
-header .right-view {
-    display: flex;
-    justify-content: center;
-}
-
 header img {
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
     border-radius: 100px;
 }
 
 .aligner {
-    margin: 2em;
+    margin: 1em;
 }
 
 .section {
@@ -118,7 +123,8 @@ header img {
     padding: 0;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 2em;
+    margin-top: 0.75em;
+    text-align: center;
 
     transform: rotate(-2deg);
 }
@@ -147,7 +153,7 @@ header img {
     display: flex;
     align-items: center;
     gap: 1em;
-    padding: 0.5em;
+    padding: 0.35em;
     border-radius: 3px;
     background-color: var(--x-background-regular);
 }
@@ -158,8 +164,8 @@ header img {
     justify-content: center;
     align-items: center;
     align-content: center;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
 }
 
 .dated-item {
@@ -183,6 +189,13 @@ header img {
 .dated-item .dates {
     color: var(--x-foreground-regular);
     font-weight: lighter;
+}
+
+.dated-item .work {
+    border-left: 2px solid #b4b4b4;
+    margin: 8px 0 0 4px;
+    padding: 4px 8px;
+    font-size: 0.9em;
 }
 
 .tags {
