@@ -11,6 +11,14 @@
           "update_link": "https://downloads.alexpado.fr/extensions/pixiv-companion/1.0.4.xpi"
         }
       ]
+    },
+    "anisekai-exporter@alexpado.fr": {
+      "updates": [
+        {
+          "version": "1.1.2",
+          "update_link": "https://downloads.alexpado.fr/extensions/anisekai-exporter/1.1.2.xpi"
+        }
+      ]
     }
   }
 }
