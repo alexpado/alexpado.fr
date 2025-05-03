@@ -39,7 +39,7 @@ body, p, .text {
 .background {
     position: absolute;
     top: -50px;
-    height: 315px;
+    height: 312px;
     left: -30%;
     right: -30%;
     background-color: var(--x-primary-color);
@@ -48,6 +48,10 @@ body, p, .text {
 
     transform: rotate(-2deg);
     z-index: 0;
+}
+
+.header-block.spacer {
+    height: 23px;
 }
 
 header h1, header h2, header h3, header h4, header h5, header h6 {
@@ -96,7 +100,7 @@ header.split-view .right-view {
     flex: 1;
 }
 
-header .header-block {
+header .header-block:not(.spacer) {
     margin-top: 1.5em;
 }
 
@@ -195,8 +199,14 @@ header img {
 .dated-item .work {
     border-left: 2px solid #b4b4b4;
     margin: 4px 0 0 4px;
-    padding: 2px 8px;
+    padding: 1.4px 8px;
     font-size: 0.9em;
+}
+
+.projects .dated-item .work {
+    border-left: 0;
+    margin: 4px 0 0 0;
+    padding: 1px 0;
 }
 
 .tags {
@@ -225,4 +235,14 @@ header img {
         width: auto;
         height: auto;
     }
+}
+
+.cv2 .split-view .view.left-view {
+  flex-basis: 30%;
+}
+
+.cv2 .dated-item .work.rg {
+    border-left: 0;
+    margin: 4px 0 0 0;
+    padding: 1px 0;
 }

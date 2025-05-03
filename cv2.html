@@ -16,7 +16,7 @@
 
 <body>
 
-<div class="containment">
+<div class="containment cv2">
 
     <div class="background"></div>
 
@@ -24,6 +24,8 @@
         <div class="view left-view">
             <h1 class="name">Alexandre Padovan</h1>
             <h2>Développeur Web / Java — 5 ans d’expérience</h2>
+
+            <div class="header-block spacer"></div>
 
             <div class="header-block introduction">
                 <p><i>
@@ -33,10 +35,9 @@
                 </i></p>
             </div>
 
-            <div class="header-block contract">
-                <p>CDI ou Contrat d’apprentissage — 3 Semaines en Entreprise / 1 Semaine en École</p>
-                <p>Formation éligible à l’Aide Exceptionnelle de 5 000 €</p>
-            </div>
+            <div class="header-block spacer"></div>
+            <div class="header-block spacer"></div>
+
         </div>
         <div class="view right-view">
             <img src="assets/img/this_is_my_face_transparent.png" alt="Profile">
@@ -51,6 +52,10 @@
         <div class="tech-container">
             <img class="tech" alt="" src="assets/img/stacks/springboot.svg" />
             <span>Springboot</span>
+        </div>
+        <div class="tech-container">
+            <img class="tech" alt="" src="assets/img/stacks/csharp.svg" />
+            <span>C#</span>
         </div>
         <div class="tech-container">
             <img class="tech" alt="" src="assets/img/stacks/mariadb.svg" />
@@ -69,10 +74,6 @@
             <span>VueJS</span>
         </div>
         <div class="tech-container">
-            <img class="tech" alt="" src="assets/img/stacks/android.svg" />
-            <span>Android</span>
-        </div>
-        <div class="tech-container">
             <img class="tech" alt="" src="assets/img/stacks/electron.svg" />
             <span>Electron</span>
         </div>
@@ -86,6 +87,67 @@
 
     <section class="section split-view">
         <div class="view left-view">
+
+            <h1 class="section-title">Projets Open-Source</h1>
+
+            <div class="section-item-list projects">
+                <div class="dated-item">
+                    <p class="name">Umbra</p>
+                    <p class="organization">Contributeur</p>
+                    <a href="https://github.com/una-xiv/umbra" target="_blank" class="dates">github: una-xiv/umbra</a>
+                    <p class="work">
+                        Ajout de fonctionnalité au plugin Dalamud permettant de personnaliser l’interface du jeu Final
+                        Fantasy XIV.
+                    </p>
+                    <div class="tags">
+                        <span class="tag tag-main">C#</span>
+                    </div>
+                </div>
+                <div class="dated-item">
+                    <p class="name">Anisekai</p>
+                    <p class="organization">Mainteneur</p>
+                    <a href="https://github.com/anisekai-project/anisekai-service" target="_blank" class="dates">github:
+                                                                                                                 anisekai-project/anisekai-service</a>
+                    <p class="work">
+                        Gestion de librairie vidéo (anime japonais) avec bot Discord pour une gestion de liste de
+                        visionnage et planification de séances « cinéma ».
+                    </p>
+                    <div class="tags">
+                        <span class="tag tag-main">Springboot</span>
+                        <span class="tag tag-main">MariaDB</span>
+                        <span class="tag tag-main">Java</span>
+                        <span class="tag tag-main">Docker</span>
+                    </div>
+                </div>
+                <div class="dated-item">
+                    <p class="name">Camera Viewer App</p>
+                    <p class="organization">Mainteneur</p>
+                    <a href="https://github.com/alexpado/camera-viewer-app" target="_blank" class="dates">github:
+                                                                                                          alexpado/camera-viewer-app</a>
+                    <p class="work">
+                        Affichage d’un flux vidéo et flux audio low-latency d’un périphérique de capture pour en
+                        permettre le partage simple via des plateformes comme Discord.
+                    </p>
+                    <div class="tags">
+                        <span class="tag tag-main">ElectronJS</span>
+                        <span class="tag tag-main">NodeJS</span>
+                    </div>
+                </div>
+
+                <div class="dated-item">
+                    <p class="name">Pixiv Companion</p>
+                    <p class="organization">Mainteneur</p>
+                    <a href="https://github.com/alexpado/pixiv-companion" target="_blank" class="dates">github:
+                                                                                                                alexpado/pixiv-companion</a>
+                    <p class="work">
+                        Permet de partager simplement des artworks de Pixiv via webhooks.
+                    </p>
+                    <div class="tags">
+                        <span class="tag tag-main">Extension Navigateur</span>
+                    </div>
+                </div>
+            </div>
+
             <h1 class="section-title">Coordonnées</h1>
 
             <div class="section-item-list">
@@ -102,10 +164,6 @@
                     <div class="label">02100 Saint-Quentin</div>
                 </div>
                 <div class="section-item">
-                    <div class="icon"><i data-feather="calendar"></i></div>
-                    <div class="label">27 ans — 26/08/1997</div>
-                </div>
-                <div class="section-item">
                     <div class="icon"><i data-feather="github"></i></div>
                     <div class="label">
                         <a href="https://github.com/alexpado" target="_blank">https://github.com/alexpado</a></div>
@@ -119,93 +177,8 @@
                     <div class="label">Permis B — Véhiculé — Ouvert au télétravail</div>
                 </div>
             </div>
-
-            <h1 class="section-title">Formations</h1>
-
-            <div class="section-item-list">
-                <div class="dated-item">
-                    <p class="name">Formation Expert en Système d'Information - 2025 - 3W Academy - Télé présentiel</p>
-                    <p class="organization">3W Academy</p>
-                    <p class="dates">03/2025 — En cours</p>
-                </div>
-                <div class="dated-item">
-                    <p class="name">Développeur Android</p>
-                    <p class="organization">OpenClassrooms</p>
-                    <p class="dates">07/2023 — 07/2024</p>
-                    <div class="tags">
-                        <span class="tag tag-main">Android</span>
-                        <span class="tag tag-main">Android Studio</span>
-                        <span class="tag tag-main">Java</span>
-                        <span class="tag tag-main">Git</span>
-                    </div>
-                </div>
-                <div class="dated-item">
-                    <p class="name">Licence Conception Numérique et Développement d’Application Internet</p>
-                    <p class="organization">IFTS de Charleville-Mézières</p>
-                    <p class="dates">09/2017 — 06/2018</p>
-                    <div class="tags">
-                        <span class="tag tag-main">HTML</span>
-                        <span class="tag tag-main">CSS</span>
-                        <span class="tag tag-main">Javascript</span>
-                        <span class="tag tag-main">PHP</span>
-                        <span class="tag tag-main">MySQL</span>
-                        <span class="tag tag-main">Agile</span>
-                        <span class="tag tag-main">Git</span>
-                    </div>
-                </div>
-
-                <div class="dated-item">
-                    <p class="name">BTS Service Informatique aux Organisations</p>
-                    <p class="organization">Lycée Général et Technologique Monge</p>
-                    <p class="dates">09/2015 — 06/2017</p>
-                    <div class="tags">
-                        <span class="tag tag-main">HTML</span>
-                        <span class="tag tag-main">CSS</span>
-                        <span class="tag tag-main">Javascript</span>
-                        <span class="tag tag-main">PHP</span>
-                        <span class="tag tag-main">MySQL</span>
-                        <span class="tag tag-main">Git</span>
-                    </div>
-                </div>
-            </div>
-
-            <h1 class="section-title">Contact Formation 3W Academy</h1>
-
-            <div class="section-item-list">
-                <div class="section-item">
-                    <div class="icon"><i data-feather="user"></i></div>
-                    <div class="label">Jérémy Rocamora</div>
-                </div>
-                <div class="section-item">
-                    <div class="icon"><i data-feather="phone"></i></div>
-                    <div class="label">06.80.01.40.29</div>
-                </div>
-                <div class="section-item">
-                    <div class="icon"><i data-feather="mail"></i></div>
-                    <div class="label">j.rocamora@3wacademy.fr</div>
-                </div>
-            </div>
         </div>
         <div class="view right-view">
-            <h1 class="section-title">Compétences</h1>
-
-            <div class="section-item-list">
-                <div class="section-item">
-                    <div class="label">Anglais (niveau C1)</div>
-                </div>
-                <div class="section-item">
-                    <div class="label">Travail en équipe <i>(Github, Code With Me, ...)</i></div>
-                </div>
-                <div class="section-item">
-                    <div class="label">Résolution de problèmes <i>(Algo, Mindmap, Brainstorming, ...)</i></div>
-                </div>
-                <div class="section-item">
-                    <div class="label">Réalisation d’application web avec <b>VueJS</b> et <b>Springboot</b></div>
-                </div>
-                <div class="section-item">
-                    <div class="label">Création d’interfaces et designs avec Figma</div>
-                </div>
-            </div>
 
             <h1 class="section-title">Expériences</h1>
 
@@ -217,20 +190,22 @@
                     <div class="tags">
                         <span class="tag tag-main">HTML</span>
                         <span class="tag tag-main">CSS</span>
-                        <span class="tag tag-main">Javascript</span>
                         <span class="tag tag-main">VueJS</span>
-                        <span class="tag tag-main">Git</span>
                         <span class="tag tag-main">Java</span>
                         <span class="tag tag-main">Springboot</span>
                         <span class="tag tag-main">PHP</span>
                         <span class="tag tag-main">Laravel</span>
-                        <span class="tag tag-main">MySQL / MariaDB</span>
+                        <span class="tag tag-main">MariaDB</span>
                     </div>
-                    <p class="work">Création d’une solution de normalisation de CSV selon modèles utilisateurs avec Springboot et VueJS.</p>
-                    <p class="work">Mise en place d’une architecture microservices en Springboot.</p>
-                    <p class="work">Développement d’une solution de répartition de tâches entre microservices pour gérer de longs traitements.</p>
+                    <p class="work">Référent Java / Mentor VueJS / Peer-Programming</p>
+                    <p class="work">Création d’une pipeline Gitlab pour la publication automatique d’une librairie Java.</p>
+                    <p class="work">Création d’une solution de normalisation de CSV selon modèles utilisateurs avec
+                                    Springboot et VueJS from scratch.</p>
+                    <p class="work">Mise en place d’une architecture microservices en Springboot from scratch.</p>
+                    <p class="work">Développement d’une solution de répartition de tâches entre microservices pour gérer
+                                    de longs traitements from scratch.</p>
                     <p class="work">Développement et conception d’un moteur de traitement de données multi-sources en
-                                    temps réel en Java</p>
+                                    temps réel en Java from scratch.</p>
                 </div>
                 <div class="dated-item">
                     <p class="name">Développeur Web</p>
@@ -242,19 +217,36 @@
                         <span class="tag tag-main">Javascript</span>
                         <span class="tag tag-main">PHP</span>
                         <span class="tag tag-main">MySQL</span>
-                        <span class="tag tag-main">Git</span>
                     </div>
                     <p class="work">Mise en place d’un système de paiement avec le SDK Stripe</p>
                     <p class="work">Intégration de site web à partir de maquette</p>
                 </div>
             </div>
 
-            <h1 class="section-title">Hobbies</h1>
+            <h1 class="section-title">Compétences</h1>
 
             <div class="section-item-list">
                 <div class="section-item">
-                    <div class="label">Open Source <i>(Contributions, projets personnels))</i></div>
+                    <div class="label">Anglais (niveau C1)</div>
                 </div>
+                <div class="section-item">
+                    <div class="label">CICD — Gitlab Pipelines / GitHub Workflow</div>
+                </div>
+                <div class="section-item">
+                    <div class="label">Création d’interfaces et designs avec Figma</div>
+                </div>
+                <div class="section-item">
+                    <div class="label">Création d’image docker, déploiement docker-compose</div>
+                </div>
+                <div class="section-item">
+                    <div class="label">Adaptation rapide</div>
+                </div>
+            </div>
+
+
+            <h1 class="section-title">Hobbies</h1>
+
+            <div class="section-item-list">
                 <div class="section-item">
                     <div class="label">Veille Technologique <i>(tldr, youtube tech, news, ...)</i></div>
                 </div>
