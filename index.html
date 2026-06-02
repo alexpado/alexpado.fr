@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>alexpado - French Web Developer</title>
@@ -13,12 +13,16 @@
     <meta property="og:url" content="https://alexpado.fr">
     <meta property="og:description" content="I'm a French Web Developer doing my job during the day, and coding what I like during the night; ranging from website to discord bots.">
 
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/globals.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script defer src="assets/js/feather.min.js"></script>
-    <script defer src="assets/js/script.js"></script>
-    <script defer type="module" src="assets/js/i18n.js"></script>
+    <link rel="stylesheet" href="/assets/css/theme.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script>
+        document.documentElement.setAttribute('lang', localStorage.getItem('language') || 'en');
+    </script>
+
+    <script defer type="module" src="/assets/js/app.js"></script>
+    <script defer type="module" src="/assets/js/i18n.js"></script>
+    <script defer src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
 
     <!--
  /\                 /\
@@ -39,182 +43,622 @@
 </head>
 <body>
 
-<div id="language-switcher"></div>
 
-<section id="landing" class="full-section">
-
-    <div id="effect">
-        <div class="flash"></div>
-        <div class="overlay"></div>
+<nav id="navigation">
+    <h1>alexpado</h1>
+    <div class="links">
+        <a class="active" href="#home">
+            <iconify-icon icon="tabler:home"></iconify-icon>
+            <span lang="en">Home</span>
+            <span lang="fr">Accueil</span>
+        </a>
+        <a href="#me">
+            <iconify-icon icon="tabler:id"></iconify-icon>
+            <span lang="en">About Me</span>
+            <span lang="fr">À propos</span>
+        </a>
+        <a href="#projects">
+            <iconify-icon icon="tabler:device-desktop-code"></iconify-icon>
+            <span lang="en">Projects</span>
+            <span lang="fr">Projets</span>
+        </a>
+        <a href="#scheme">
+            <iconify-icon icon="tabler:palette"></iconify-icon>
+            <span lang="en">Midnight Blue</span>
+            <span lang="fr">Midnight Blue</span>
+        </a>
+        <a href="#contact">
+            <iconify-icon icon="tabler:mail"></iconify-icon>
+            <span lang="en">Contact</span>
+            <span lang="fr">Contact</span>
+        </a>
     </div>
+</nav>
 
-    <div class="section-background fill-parent"></div>
-
-    <a href="https://unsplash.com/fr/photos/route-vide-qi2hmCwlhcE" class="clickable credits flex flex-center flex-row" target="_blank"><i data-feather="camera"></i>
-        Andre Benz @ unsplash</a>
-
-    <div class="section-content fill-parent flex flex-center">
-        <h1 data-i18n="landing.header.name" class="text"></h1>
-        <h2 data-i18n="landing.header.title"></h2>
-
-        <div class="flex flex-row socials flex-center">
-            <a class="social clickable" href="https://www.linkedin.com/in/alex-pado/" target="_blank"><i data-feather="linkedin"></i></a>
-            <a class="social clickable" href="https://github.com/alexpado" target="_blank"><i data-feather="github"></i></a>
-            <a class="social clickable" href="mailto:contact@alexpado.fr" target="_blank"><i data-feather="mail"></i></a>
+<main>
+    <section id="home">
+        <div class="section">
+            <img src="/assets/img/icon.png" alt="logo" />
         </div>
-    </div>
-
-    <div id="scroll-indicator" class="slide-top"><i data-feather="arrow-down"></i></div>
-</section>
-
-<section id="intro" class="section flex section-light">
-    <h2 class="section-title" data-i18n="intro.title"></h2>
-
-    <div class="split-view">
-        <div class="view left-view flex">
-            <p class="justify" data-i18n="intro.description.p1"></p>
-            <p class="justify" data-i18n="intro.description.p2"></p>
-            <p class="justify" data-i18n="intro.description.p3"></p>
+        <div class="section">
+            <h2>PADOVAN Alexandre</h2>
+            <h3 lang="en">French Software Engineer</h3>
+            <h3 lang="fr">Ingénieur en Développement Logiciel</h3>
         </div>
-        <div class="view right-view grid">
-            <div class="grid-item flex flex-center">
-                <img src="assets/img/stacks/discord.svg" alt="" />
-                <p>Discord</p>
+    </section>
+
+
+    <section id="me">
+        <h2 lang="en">About Me</h2>
+        <h2 lang="fr">À propos de moi</h2>
+
+        <div class="section-content">
+            <p lang="en">
+                Hello! I'm <strong>Alexandre Padovan</strong>, a passionate Software Engineer based in France.
+                By day, I work professionally as a Web Developer, tackling complex business logic and crafting
+                seamless user experiences. By night, I let my curiosity take the wheel.
+            </p>
+            <p lang="fr">
+                Bonjour ! Je m'appelle <strong>Alexandre Padovan</strong>, un ingénieur logiciel passionné basé en
+                France. Le jour, je travaille en tant que développeur web, approchant des logiques métier complexes et
+                concevant des expériences utilisateur fluides. La nuit, je laisse libre cours à ma curiosité.
+            </p>
+
+            <p lang="en">
+                My after-hours projects are directly fueled by my hobbies: <strong>gaming, anime, and
+                                                                                   reverse-engineering</strong>.
+                Whether I'm building tools to organize my media library, writing desktop apps to stream console games,
+                or extracting locked audio files from game engines, I code to solve my own real-world frustrations.
+            </p>
+            <p lang="fr">
+                Mes projets personnels sont directement nourris par mes passions :
+                <strong>les jeux vidéo, les animés et le reverse-engineering</strong>.
+                Qu'il s'agisse de créer des outils pour organiser ma bibliothèque multimédia, de développer des
+                applications de bureau pour streamer des jeux console, ou d'extraire des fichiers audio protégés de
+                moteurs de jeu, je code pour résoudre mes propres problématiques du quotidien.
+            </p>
+
+            <p lang="en">
+                As you will notice from my projects, I take a
+                <a href="https://dev.to/tahmidbintaslim/first-principles-thinking-a-software-engineers-guide-to-building-smarter-1c0g" target="_blank">first
+                                                                                                                                                       principles</a>
+                approach to engineering. I often build things from scratch without relying on heavy frameworks or
+                existing libraries. I do this because I believe the best way to master your craft is to understand
+                exactly <em>how</em> things work under the hood.
+            </p>
+            <p lang="fr">
+                Comme vous le constaterez à travers mes projets, j'adopte une approche d'ingénierie basée sur les
+                <a href="https://dev.to/tahmidbintaslim/first-principles-thinking-a-software-engineers-guide-to-building-smarter-1c0g" target="_blank">"first
+                                                                                                                                                       principles"
+                                                                                                                                                       (article
+                                                                                                                                                       en
+                                                                                                                                                       anglais)</a>.
+                Je construis souvent mes outils à partir de zéro, sans dépendre de frameworks lourds ou de bibliothèques
+                existantes. Je fais cela car je suis convaincu que la meilleure façon de maîtriser son art est de
+                comprendre exactement <em>comment</em> les choses fonctionnent sous le capot.
+            </p>
+
+            <p class="center" lang="en">
+                <span>Want to get in touch? You can find me on</span>
+                <a href="https://github.com/alexpado" target="_blank">
+                    <iconify-icon icon="tabler:brand-github"></iconify-icon>
+                    <span>GitHub</span>
+                </a>
+                <span>or connect with me on</span>
+                <a href="https://www.linkedin.com/in/alex-pado/" target="_blank">
+                    <iconify-icon icon="tabler:brand-linkedin"></iconify-icon>
+                    <span>LinkedIn</span>
+                </a>.
+            </p>
+            <p class="center" lang="fr">
+                <span>Vous souhaitez me contacter ? Vous pouvez me retrouver sur</span>
+                <a href="https://github.com/alexpado" target="_blank">
+                    <iconify-icon icon="tabler:brand-github"></iconify-icon>
+                    <span>GitHub</span>
+                </a>
+                <span>ou vous connecter avec moi sur</span>
+                <a href="https://www.linkedin.com/in/alex-pado/" target="_blank">
+                    <iconify-icon icon="tabler:brand-linkedin"></iconify-icon>
+                    <span>LinkedIn</span>
+                </a>.
+            </p>
+
+            <details>
+                <summary>
+                    <span lang="en">But, you are not only coding, right ? Tell me more about you.</span>
+                    <span lang="fr">Mais tu ne fais pas que coder, n'est-ce pas ? Dis-moi en plus sur toi.</span>
+                </summary>
+                <div class="section-content">
+                    <p lang="en">
+                        Right. My life isn't entirely spent between lines of code (phew). When I'm stepping away from
+                        the IDE, you can usually find me playing video games or sitting at the piano. I dabble in
+                        amateur music composition, which you can even listen to a few of my original pieces on my
+                        <a href="https://soundcloud.com/saruwatari-masaki" target="_blank">
+                            <span>SoundCloud</span>
+                        </a> or
+                        <a href="https://www.youtube.com/@saruwatari-masaki">
+                            <span>YouTube</span>
+                        </a>!
+                    </p>
+                    <p lang="fr">
+                        C'est vrai ! Ma vie ne se résume pas uniquement à des lignes de code (ouf). Lorsque je m'éloigne
+                        de mon IDE, vous me trouverez généralement en train de jouer aux jeux vidéo ou installé au
+                        piano. Je m'essaye à la composition musicale amateur, et vous pouvez d'ailleurs écouter
+                        quelques-unes de mes créations originales sur mon
+                        <a href="https://soundcloud.com/saruwatari-masaki" target="_blank">
+                            <span>SoundCloud</span>
+                        </a> ou
+                        <a href="https://www.youtube.com/@saruwatari-masaki">
+                            <span>YouTube</span>
+                        </a> !
+                    </p>
+
+                    <p lang="en">
+                        Because of my love for games and anime, music is a huge part of my life. If you want a taste of
+                        my daily playlists, I highly recommend checking out composers like Elliot Hsu, mamomo, Kashiwade
+                        and satella.
+                    </p>
+                    <p lang="fr">
+                        En raison de mon amour pour les jeux vidéo et les animés, la musique occupe une place centrale
+                        dans ma vie. Si vous voulez un aperçu de mes playlists quotidiennes, je vous recommande vivement
+                        de découvrir des compositeurs comme Elliot Hsu, mamomo, Kashiwade et satella.
+                    </p>
+
+                    <p lang="en">
+                        Even when I'm not programming, I love tinkering with IT infrastructure. I manage my own home
+                        network environment, utilizing an Intel NUC as a self-hosted server alongside a custom DNS
+                        configuration using Pi-hole. It's just another way I enjoy keeping my hands on the technology I
+                        use every day.
+                    </p>
+                    <p lang="fr">
+                        Même lorsque je ne code pas, j'adore bidouiller en infrastructure. Je gère mon propre réseau
+                        domestique, en utilisant un Intel NUC comme serveur auto-hébergé ainsi qu'une configuration DNS
+                        personnalisée avec Pi-hole. C'est simplement une autre façon de garder la main sur les
+                        technologies que j'utilise au quotidien.
+                    </p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 lang="en">Some of my projects...</h2>
+        <h2 lang="fr">Quelques-uns de mes projets...</h2>
+
+        <div class="section-content">
+            <article class="project">
+                <section class="meta">
+                    <h2>Anisekai</h2>
+                    <a href="https://github.com/anisekai-project" target="_blank">
+                        <iconify-icon icon="tabler:brand-github"></iconify-icon>
+                        <span lang="en">Source Code</span>
+                        <span lang="fr">Code Source</span>
+                    </a>
+                </section>
+                <section class="tags">
+                    <span class="tag scheme-highlight">
+                        <span lang="en">Role</span><span lang="fr">Rôle</span>
+                        <span lang="en">Maintainer</span><span lang="fr">Mainteneur</span>
+                    </span>
+                    <span class="tag scheme-red">
+                        <span>Type</span>
+                        <span>Web</span>
+                    </span>
+                    <span class="tag scheme-green">
+                        <span>Frontend</span>
+                        <span>Nuxt</span>
+                    </span>
+                    <span class="tag scheme-blue">
+                        <span>Backend</span>
+                        <span>Springboot</span>
+                    </span>
+                    <span class="tag scheme-magenta">
+                        <span>Infra</span>
+                        <span>Docker, MariaDB</span>
+                    </span>
+                    <span class="tag scheme-yellow">
+                        <span lang="en">Other</span><span lang="fr">Autre</span>
+                        <span leng="en">Penpot, Browser Extension</span><span lang="fr">Penpot, Extension Navigateur</span>
+                    </span>
+                </section>
+                <section class="section-content">
+                    <p lang="en">
+                        Representing my largest and most active personal project, Anisekai is a full-stack media
+                        management platform designed to organize a personal anime library. Building this required
+                        engineering a complete ecosystem from scratch, including a web frontend with a custom media
+                        player, a Discord-integrated API, and specialized Java libraries.
+                    </p>
+                    <p lang="fr">
+                        Représentant mon projet personnel le plus vaste et le plus actif, Anisekai est une plateforme
+                        full-stack de gestion de médias conçue pour organiser une bibliothèque personnelle d'animés. Sa
+                        réalisation a nécessité l'ingénierie d'un écosystème complet à partir de zéro, comprenant un
+                        frontend web avec un lecteur média personnalisé, une API intégrée à Discord et des bibliothèques
+                        Java spécialisées.
+                    </p>
+
+                    <p lang="en">
+                        I purposefully developed these libraries myself instead of using off-the-shelf dependencies
+                        whenever possible; my goal was to cultivate my problem-solving skills and gain hands-on
+                        experience designing complex systems from the ground up.
+                    </p>
+                    <p lang="fr">
+                        J'ai délibérément développé ces bibliothèques moi-même plutôt que d'utiliser des dépendances
+                        prêtes à l'emploi chaque fois que cela était possible ; mon objectif était de cultiver mes
+                        compétences en résolution de problèmes et d'acquérir une expérience pratique dans la conception
+                        de systèmes complexes à partir de zéro.
+                    </p>
+
+                    <p lang="en">
+                        Because the platform manages real media, the live instance is kept private to strictly adhere to
+                        copyright laws. However, the entire codebase is open-source, making my tools and architectural
+                        decisions freely available for others to explore or self-host.
+                    </p>
+                    <p lang="fr">
+                        La plateforme gérant des médias réels, l'instance en ligne est maintenue privée afin de
+                        respecter les droits d'auteur. Cependant, l'intégralité du code source est open-source, rendant
+                        mes outils et mes choix d'architecture librement accessibles pour l'exploration ou
+                        l'auto-hébergement.
+                    </p>
+                </section>
+            </article>
+
+            <article class="project">
+                <section class="meta">
+                    <h2>Camera Viewer App</h2>
+                    <a href="https://github.com/alexpado/camera-viewer-app" target="_blank">
+                        <iconify-icon icon="tabler:brand-github"></iconify-icon>
+                        <span lang="en">Source Code</span>
+                        <span lang="fr">Code Source</span>
+                    </a>
+                </section>
+                <section class="tags">
+                    <span class="tag scheme-highlight">
+                        <span lang="en">Role</span><span lang="fr">Rôle</span>
+                        <span lang="en">Maintainer</span><span lang="fr">Mainteneur</span>
+                    </span>
+                    <span class="tag scheme-red">
+                        <span>Type</span>
+                        <span lang="en">Desktop App</span><span lang="fr">App de Bureau</span>
+                    </span>
+                    <span class="tag scheme-blue">
+                        <span>Framework</span>
+                        <span>Electron JS</span>
+                    </span>
+                    <span class="tag scheme-yellow">
+                        <span lang="en">Other</span><span lang="fr">Autre</span>
+                        <span>Figma</span>
+                    </span>
+                </section>
+                <section class="section-content">
+                    <p lang="en">
+                        Driven by the high cost of premium capture hardware, I set out to create a budget-friendly way
+                        to stream console gameplay. I engineered a custom Electron-based desktop application designed to
+                        interface perfectly with inexpensive HDMI-to-USB adapters.
+                    </p>
+                    <p lang="fr">
+                        Face au coût élevé du matériel de capture haut de gamme, j'ai entrepris de créer une solution
+                        économique pour streamer des sessions de jeu sur console. J'ai conçu une application de bureau
+                        personnalisée basée sur Electron, pensée pour s'interfacer parfaitement avec des adaptateurs
+                        HDMI-vers-USB bon marché.
+                    </p>
+
+                    <p lang="en">
+                        After testing existing viewer applications and finding them plagued by poor video/audio
+                        synchronization and high latency, I decided to build my own solution from the ground up. The
+                        result is a lightweight, low-latency viewer that provides perfectly synced media, entirely
+                        bypassing the need for expensive hardware.
+                    </p>
+                    <p lang="fr">
+                        Après avoir testé des applications existantes et constaté qu'elles souffraient d'une mauvaise
+                        synchronisation audio/vidéo et d'une latence élevée, j'ai décidé de développer ma propre
+                        solution de A à Z. Le résultat est un lecteur léger à faible latence offrant des médias
+                        parfaitement synchronisés, évitant ainsi l'achat de matériel coûteux.
+                    </p>
+                </section>
+            </article>
+
+            <article class="project">
+                <section class="meta">
+                    <h2>Hoyoverse Music Unpacker</h2>
+                    <a href="https://github.com/alexpado/hoyoverse-music-unpacker" target="_blank">
+                        <iconify-icon icon="tabler:brand-github"></iconify-icon>
+                        <span lang="en">Source Code</span>
+                        <span lang="fr">Code Source</span>
+                    </a>
+                </section>
+                <section class="tags">
+                    <span class="tag scheme-highlight">
+                        <span lang="en">Role</span><span lang="fr">Rôle</span>
+                        <span lang="en">Maintainer</span><span lang="fr">Mainteneur</span>
+                    </span>
+                    <span class="tag scheme-red">
+                        <span>Type</span>
+                        <span lang="en">CLI Tool</span><span lang="fr">Outil CLI</span>
+                    </span>
+                </section>
+                <section class="section-content">
+                    <p lang="en">
+                        Driven by my appreciation for video game soundtracks and a curiosity about how game assets are
+                        structured, I developed Hoyoverse Music Unpacker.
+                    </p>
+                    <p lang="fr">
+                        Porté par mon appréciation des bandes-son de jeux vidéo et par curiosité pour la structure des
+                        ressources de jeu, j'ai développé Hoyoverse Music Unpacker.
+                    </p>
+
+                    <p lang="en">
+                        It is a Java-based command-line utility designed to extract audio files from the proprietary
+                        data packages used in titles from the game publisher Hoyoverse. What started as a small personal
+                        script has evolved into a popular community tool.
+                    </p>
+                    <p lang="fr">
+                        Il s'agit d'un utilitaire en ligne de commande développé en Java, conçu pour extraire des
+                        fichiers audio des paquets de données propriétaires utilisés dans les titres de l'éditeur
+                        Hoyoverse. Ce qui n'était au départ qu'un simple script personnel est devenu un outil
+                        communautaire populaire.
+                    </p>
+
+                    <p lang="en">
+                        Maintaining it has been a fantastic exercise in handling binary file structures, ensuring
+                        cross-game compatibility, and actively managing an open-source project by directly addressing
+                        community feedback and adapting the code to frequent game updates.
+                    </p>
+                    <p lang="fr">
+                        Le maintenir a été un excellent exercice pour manipuler des structures de fichiers binaires,
+                        garantir la compatibilité entre plusieurs jeux et gérer activement un projet open-source en
+                        répondant directement aux retours de la communauté et en adaptant le code aux fréquentes mises à
+                        jour des jeux.
+                    </p>
+                </section>
+            </article>
+
+            <p class="center" lang="en">
+                <span>You can view more of my projects over at my</span>
+                <a href="https://github.com/alexpado?tab=repositories" target="_blank">
+                    <iconify-icon icon="tabler:brand-github"></iconify-icon>
+                    <span>Github Profile</span>
+                </a>
+            </p>
+            <p class="center" lang="fr">
+                <span>Vous pouvez découvrir d'autres de mes projets sur mon</span>
+                <a href="https://github.com/alexpado?tab=repositories" target="_blank">
+                    <iconify-icon icon="tabler:brand-github"></iconify-icon>
+                    <span>Profil GitHub</span>
+                </a>
+            </p>
+
+        </div>
+    </section>
+
+    <section id="scheme">
+        <h2>Midnight Blue</h2>
+
+        <div class="section-content">
+            <p lang="en">
+                You might have noticed the distinct color palette used throughout this website.
+                <strong>Midnight Blue</strong> is my personal aesthetic and custom color scheme.
+                Inspired by my late-night coding sessions, it's designed to be highly readable, easy on the eyes, and
+                heavily for a sleek, modern developer experience.
+            </p>
+            <p lang="fr">
+                Vous avez peut-être remarqué la palette de couleurs distinctive utilisée sur ce site.
+                <strong>Midnight Blue</strong> est ma charte graphique personnelle et mon thème sur mesure.
+                Inspiré par mes sessions de code nocturnes, il est conçu pour être très lisible, reposant pour les yeux
+                et pensé pour offrir une expérience développeur moderne et épurée.
+            </p>
+
+            <p lang="en">
+                You can also use the <a href="/assets/css/theme.css" target="_blank">theme.css</a> file used by this
+                website in your own projects. I plan to expand this color scheme to a proper theme for the web in the
+                future with proper support for different kind of components and inputs.
+            </p>
+            <p lang="fr">
+                Vous pouvez également utiliser le fichier <a href="/assets/css/theme.css" target="_blank">theme.css</a>
+                utilisé sur ce site dans vos propres projets. J'envisage d'étendre cette palette pour en faire un
+                véritable thème web complet à l'avenir, avec une prise en charge adaptée de différents types de
+                composants et d'éléments de formulaire.
+            </p>
+
+            <p lang="en">
+                If you end up using this color scheme, please let me know; I would be happy to see what people create
+                using it!
+            </p>
+            <p lang="fr">
+                Si vous finissez par utiliser ce thème, n'hésitez pas à me le faire savoir ; je serais ravi de voir
+                ce que vous créez avec !
+            </p>
+
+            <p lang="en"><a href="midnight-blue.html">View the complete scheme details</a></p>
+            <p lang="fr"><a href="midnight-blue.html">Voir les détails complets du thème</a></p>
+            <hr>
+            <div class="midnight-blue live-preview">
+                <div class="color-group backgrounds">
+                    <div class="color-variant lowest">
+                        <div class="color">
+                            <div class="color-well"></div>
+                            <div class="color-details">
+                                <h3>Background Lowest</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-group backgrounds">
+                    <div class="color-variant lower">
+                        <div class="color">
+                            <div class="color-well"></div>
+                            <div class="color-details">
+                                <h3>Background Lower</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-group backgrounds">
+                    <div class="color-variant normal">
+                        <div class="color">
+                            <div class="color-well"></div>
+                            <div class="color-details">
+                                <h3>Background</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-group backgrounds">
+                    <div class="color-variant lighter">
+                        <div class="color">
+                            <div class="color-well"></div>
+                            <div class="color-details">
+                                <h3>Background Lighter</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-group backgrounds">
+                    <div class="color-variant lightest">
+                        <div class="color">
+                            <div class="color-well"></div>
+                            <div class="color-details">
+                                <h3>Background Lightest</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-group scheme-highlight">
+                    <div class="color-variant ">
+                        <div class="color">
+                            <div class="color-well"></div>
+                            <div class="color-details">
+                                <h3>Highlight</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-group scheme-primary">
+                    <div class="color-variant ">
+                        <div class="color">
+                            <div class="color-well"></div>
+                            <div class="color-details">
+                                <h3>Primary</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-group scheme-red">
+                    <div class="color-variant ">
+                        <div class="color">
+                            <div class="color-well"></div>
+                            <div class="color-details">
+                                <h3>Red</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-group scheme-green">
+                    <div class="color-variant ">
+                        <div class="color">
+                            <div class="color-well"></div>
+                            <div class="color-details">
+                                <h3>Green</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-group scheme-yellow">
+                    <div class="color-variant ">
+                        <div class="color">
+                            <div class="color-well"></div>
+                            <div class="color-details">
+                                <h3>Yellow</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-group scheme-blue">
+                    <div class="color-variant ">
+                        <div class="color">
+                            <div class="color-well"></div>
+                            <div class="color-details">
+                                <h3>Blue</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-group scheme-magenta">
+                    <div class="color-variant ">
+                        <div class="color">
+                            <div class="color-well"></div>
+                            <div class="color-details">
+                                <h3>Magenta</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-group scheme-black">
+                    <div class="color-variant ">
+                        <div class="color">
+                            <div class="color-well"></div>
+                            <div class="color-details">
+                                <h3>Black</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-group scheme-white">
+                    <div class="color-variant ">
+                        <div class="color">
+                            <div class="color-well"></div>
+                            <div class="color-details">
+                                <h3>White</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="grid-item flex flex-center">
-                <img src="assets/img/stacks/springboot.svg" alt="" />
-                <p>Springboot</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 lang="en">Contact</h2>
+        <h2 lang="fr">Contact</h2>
+
+        <div class="split">
+            <div class="section-content view">
+                <p class="contact-info">
+                    <iconify-icon icon="tabler:phone"></iconify-icon>
+                    <span>(+33) 07 81 38 47 72</span>
+                </p>
+                <p class="contact-info">
+                    <iconify-icon icon="tabler:mail"></iconify-icon>
+                    <span>contact@alexpado.fr</span>
+                </p>
+                <p class="contact-info">
+                    <iconify-icon icon="tabler:brand-github"></iconify-icon>
+                    <span>alexpado</span>
+                </p>
+                <p class="contact-info">
+                    <iconify-icon icon="tabler:brand-linkedin"></iconify-icon>
+                    <span>Alexandre Padovan</span>
+                </p>
+                <p class="contact-info">
+                    <iconify-icon icon="tabler:map-pin"></iconify-icon>
+                    <span>02100 Saint-Quentin</span>
+                </p>
+                <p class="contact-info">
+                    <a href="https://downloads.alexpado.fr/perso/cv.pdf" target="_blank" lang="en">
+                        Download my CV (French)
+                    </a>
+                    <a href="https://downloads.alexpado.fr/perso/cv.pdf" target="_blank" lang="fr">
+                        Télécharger mon CV
+                    </a>
+                </p>
+
             </div>
-            <div class="grid-item flex flex-center">
-                <img src="assets/img/stacks/electron.svg" alt="" />
-                <p>Electron</p>
-            </div>
-            <div class="grid-item flex flex-center">
-                <img src="assets/img/stacks/laravel.svg" alt="" />
-                <p>Laravel</p>
-            </div>
-            <div class="grid-item flex flex-center">
-                <img src="assets/img/stacks/docker.svg" alt="" />
-                <p>Docker</p>
-            </div>
-            <div class="grid-item flex flex-center">
-                <img src="assets/img/stacks/android.svg" alt="" />
-                <p>Android</p>
-            </div>
-            <div class="grid-item flex flex-center">
-                <img src="assets/img/stacks/vuejs.svg" alt="" />
-                <p>VueJS</p>
-            </div>
-            <div class="grid-item flex flex-center">
-                <img src="assets/img/stacks/mariadb.svg" alt="" />
-                <p>MariaDB</p>
-            </div>
-            <div class="grid-item flex flex-center">
-                <img src="assets/img/stacks/figma.svg" alt="" />
-                <p>Figma</p>
+            <div class="view">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41163.6875858183!2d3.2377846962599763!3d49.84752164954611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e8186188e01cc5%3A0x40af13e8169d440!2s02100%20Saint-Quentin!5e0!3m2!1sen!2sfr!4v1737418061465!5m2!1sen!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="works" class="section flex section-dark">
-    <h2 class="section-title" data-i18n="works.title"></h2>
-    <article class="project flex">
-        <h3 class="project-name">Anisekai</h3>
-        <div class="tags flex flex-row">
-            <span class="tag tag-green" data-i18n="works.tags.extension"></span>
-            <span class="tag tag-green">Springboot</span>
-            <span class="tag tag-green">MariaDB</span>
-            <span class="tag tag-purple">HTML</span>
-            <span class="tag tag-purple">CSS</span>
-            <span class="tag tag-purple">Javascript</span>
-            <span class="tag tag-purple">Java</span>
-            <span class="tag tag-orange">Figma</span>
-            <span class="tag tag-orange">Docker</span>
-        </div>
-        <p class="project-summary" data-i18n="works.projects.anisekai"></p>
-        <div class="actions">
-            <a href="https://github.com/anisekai-project/anisekai-service" target="_blank" class="action action-github">Github</a>
-        </div>
-    </article>
-
-    <article class="project flex">
-        <h3 class="project-name">Camera Viewer App</h3>
-        <div class="tags flex flex-row">
-            <span class="tag tag-green">Electron</span>
-            <span class="tag tag-green">NodeJS</span>
-            <span class="tag tag-purple">HTML</span>
-            <span class="tag tag-purple">CSS</span>
-            <span class="tag tag-purple">Javascript</span>
-            <span class="tag tag-orange">Figma</span>
-        </div>
-        <p class="project-summary" data-i18n="works.projects.cva"></p>
-        <div class="actions">
-            <a href="https://github.com/alexpado/camera-viewer-app" target="_blank" class="action action-github">Github</a>
-        </div>
-    </article>
-
-    <article class="project flex">
-        <h3 class="project-name">Genshin Wish Calculator</h3>
-        <div class="tags flex flex-row">
-            <span class="tag tag-purple">HTML</span>
-            <span class="tag tag-purple">CSS</span>
-            <span class="tag tag-purple">Javascript</span>
-            <span class="tag tag-orange">Figma</span>
-            <span class="tag tag-orange">Docker</span>
-        </div>
-        <p class="project-summary" data-i18n="works.projects.gwc"></p>
-        <div class="actions">
-            <a href="https://github.com/alexpado/genshin-wish-calculator" target="_blank" class="action action-github">Github</a>
-            <a href="https://gwc.akio.ovh/#/" target="_blank" class="action action-website" data-i18n="works.actions.website-en"></a>
-        </div>
-    </article>
-
-    <article class="project flex">
-        <h3 class="project-name">Pixiv Companion</h3>
-        <div class="tags flex flex-row">
-            <span class="tag tag-green" data-i18n="works.tags.extension"></span>
-            <span class="tag tag-purple">HTML</span>
-            <span class="tag tag-purple">CSS</span>
-            <span class="tag tag-purple">Javascript</span>
-            <span class="tag tag-orange">Figma</span>
-        </div>
-        <p class="project-summary" data-i18n="works.projects.pixiv"></p>
-        <div class="actions">
-            <a href="https://github.com/alexpado/pixiv-companion" target="_blank" class="action action-github">Github</a>
-        </div>
-    </article>
-</section>
-
-<section id="hobbies" class="section flex section-light">
-    <h2 class="section-title" data-i18n="hobbies.title"></h2>
-    <p class="justify" data-i18n="hobbies.description.p1"></p>
-    <p class="justify" data-i18n="hobbies.description.p2"></p>
-    <p class="justify" data-i18n="hobbies.description.p3"></p>
-</section>
-
-<section id="contact" class="section flex section-dark">
-    <h2 class="section-title" data-i18n="contact.title"></h2>
-
-
-    <div class="split-view">
-        <div class="view left-view flex contact-details">
-            <a href="tel://+33781384772" target="_blank" class="contact-detail phone"><i data-feather="phone"></i><span>(+33) 07 81 38 47 72</span></a>
-            <a href="mailto:contact@alexpado.fr" target="_blank" class="contact-detail mail"><i data-feather="mail"></i><span>contact@alexpado.fr</span></a>
-            <a href="https://github.com/alexpado" target="_blank" class="contact-detail github"><i data-feather="github"></i><span>alexpado</span></a>
-            <a href="https://www.linkedin.com/in/alex-pado/" target="_blank" class="contact-detail linkedin"><i data-feather="linkedin"></i><span>Alexandre Padovan</span></a>
-            <a href="https://www.google.fr/maps/place/02100+Saint-Quentin" target="_blank" class="contact-detail map"><i data-feather="map-pin"></i><span>02100 Saint-Quentin</span></a>
-            <a href="https://downloads.alexpado.fr/perso/cv.pdf" class="contact-detail cv" data-i18n="contact.download-cv"></a>
-        </div>
-        <div class="view right-view map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41163.6875858183!2d3.2377846962599763!3d49.84752164954611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e8186188e01cc5%3A0x40af13e8169d440!2s02100%20Saint-Quentin!5e0!3m2!1sen!2sfr!4v1737418061465!5m2!1sen!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </div>
-</section>
-
-<footer class="section flex section-light">
-    <p data-i18n="footer.signature"></p>
-</footer>
+</main>
 
 </body>
 </html>

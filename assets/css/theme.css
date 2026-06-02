@@ -1,0 +1,195 @@
+/*
+ooo        ooooo  o8o        .o8               o8o             oooo            .
+`88.       .888'  `"'       "888               `"'             `888          .o8
+ 888b     d'888  oooo   .oooo888  ooo. .oo.   oooo   .oooooooo  888 .oo.   .o888oo
+ 8 Y88. .P  888  `888  d88' `888  `888P"Y88b  `888  888' `88b   888P"Y88b    888
+ 8  `888'   888   888  888   888   888   888   888  888   888   888   888    888
+ 8    Y     888   888  888   888   888   888   888  `88bod8P'   888   888    888 .
+o8o        o888o o888o `Y8bod88P" o888o o888o o888o `8oooooo.  o888o o888o   "888"
+                                                    d"     YD
+                                                    "Y88888P'
+
+oooooooooo.  oooo
+`888'   `Y8b `888
+ 888     888  888  oooo  oooo   .ooooo.
+ 888oooo888'  888  `888  `888  d88' `88b
+ 888    `88b  888   888   888  888ooo888
+ 888    .88P  888   888   888  888    .o
+o888bood8P'  o888o  `V88V"V8P' `Y8bod8P'
+*/
+
+:root {
+
+  /* === About the background colors...
+    | Background color chroma follow a formula depending on the luminance:
+    |   C = 0.15 * (L / 0.75) ^ (LOG(0.0108 / 0.15) / LOG(0.21 / 0.75))
+    |
+    | This is done to avoid any 'weird' color perception when moving through luminance.
+    | I wasn't expecting going this deep into it when I worked on it.
+   */
+
+  --scheme-background-lowest:      oklch(0.21 0.01080 229);
+  --scheme-background-lower:       oklch(0.23 0.01145 229);
+  --scheme-background:             oklch(0.25 0.01281 229);
+  --scheme-background-lighter:     oklch(0.27 0.01469 229);
+  --scheme-background-lightest:    oklch(0.29 0.01701 229);
+
+  --scheme-primary:                oklch(0.75 0.15000 229);
+  --scheme-highlight:              oklch(0.37 0.03482 229);
+  --scheme-black:                  oklch(0.20 0.00000 0);
+  --scheme-red:                    oklch(0.55 0.20000 30);
+  --scheme-green:                  oklch(0.74 0.20000 128);
+  --scheme-yellow:                 oklch(0.75 0.20000 86);
+  --scheme-blue:                   oklch(0.60 0.20000 243);
+  --scheme-magenta:                oklch(0.47 0.20000 301);
+  --scheme-cyan:                   oklch(0.75 0.15000 229);
+  --scheme-white:                  oklch(0.89 0.00000 0);
+
+  --scheme-bright-primary:         oklch(0.90 0.10000 229);
+  --scheme-bright-highlight:       oklch(0.52 0.07036 229);
+  --scheme-bright-black:           oklch(0.30 0.00000 0);
+  --scheme-bright-red:             oklch(0.70 0.15000 30);
+  --scheme-bright-green:           oklch(0.89 0.15000 128);
+  --scheme-bright-yellow:          oklch(0.90 0.15000 86);
+  --scheme-bright-blue:            oklch(0.75 0.15000 243);
+  --scheme-bright-magenta:         oklch(0.62 0.15000 301);
+  --scheme-bright-cyan:            oklch(0.90 0.10000 229);
+  --scheme-bright-white:           oklch(0.99 0.00000 0);
+
+  --scheme-muted-primary:          oklch(0.60 0.15000 229);
+  --scheme-muted-highlight:        oklch(0.22 0.01189 229);
+  --scheme-muted-black:            oklch(0.10 0.00000 0);
+  --scheme-muted-red:              oklch(0.40 0.20000 30);
+  --scheme-muted-green:            oklch(0.59 0.20000 128);
+  --scheme-muted-yellow:           oklch(0.60 0.20000 86);
+  --scheme-muted-blue:             oklch(0.45 0.20000 243);
+  --scheme-muted-magenta:          oklch(0.32 0.20000 301);
+  --scheme-muted-cyan:             oklch(0.60 0.15000 229);
+  --scheme-muted-white:            oklch(0.79 0.00000 0);
+
+  --scheme-primary-hover:          oklch(0.80 0.15000 229);
+  --scheme-highlight-hover:        oklch(0.42 0.04525 229);
+  --scheme-black-hover:            oklch(0.22 0.00000 0);
+  --scheme-red-hover:              oklch(0.60 0.20000 30);
+  --scheme-green-hover:            oklch(0.79 0.20000 128);
+  --scheme-yellow-hover:           oklch(0.80 0.20000 86);
+  --scheme-blue-hover:             oklch(0.65 0.20000 243);
+  --scheme-magenta-hover:          oklch(0.52 0.20000 301);
+  --scheme-cyan-hover:             oklch(0.80 0.15000 229);
+  --scheme-white-hover:            oklch(0.91 0.00000 0);
+
+  --scheme-bright-primary-hover:   oklch(0.85 0.10000 229);
+  --scheme-bright-highlight-hover: oklch(0.47 0.05709 229);
+  --scheme-bright-black-hover:     oklch(0.28 0.00000 0);
+  --scheme-bright-red-hover:       oklch(0.65 0.15000 30);
+  --scheme-bright-green-hover:     oklch(0.84 0.15000 128);
+  --scheme-bright-yellow-hover:    oklch(0.85 0.15000 86);
+  --scheme-bright-blue-hover:      oklch(0.70 0.15000 243);
+  --scheme-bright-magenta-hover:   oklch(0.57 0.15000 301);
+  --scheme-bright-cyan-hover:      oklch(0.85 0.10000 229);
+  --scheme-bright-white-hover:     oklch(0.97 0.00000 0);
+
+  --scheme-muted-primary-hover:    oklch(0.65 0.15000 229);
+  --scheme-muted-highlight-hover:  oklch(0.27 0.01816 229);
+  --scheme-muted-black-hover:      oklch(0.12 0.00000 0);
+  --scheme-muted-red-hover:        oklch(0.45 0.20000 30);
+  --scheme-muted-green-hover:      oklch(0.64 0.20000 128);
+  --scheme-muted-yellow-hover:     oklch(0.65 0.20000 86);
+  --scheme-muted-blue-hover:       oklch(0.50 0.20000 243);
+  --scheme-muted-magenta-hover:    oklch(0.37 0.20000 301);
+  --scheme-muted-cyan-hover:       oklch(0.65 0.15000 229);
+  --scheme-muted-white-hover:      oklch(0.81 0.00000 0);
+
+  --scheme-transition-function:    ease-in-out;
+  --scheme-transition-duration:    .1s;
+}
+
+.scheme-primary {
+  --x-scheme:              var(--scheme-primary);
+  --x-scheme-bright:       var(--scheme-bright-primary);
+  --x-scheme-muted:        var(--scheme-muted-primary);
+  --x-scheme-hover:        var(--scheme-primary-hover);
+  --x-scheme-bright-hover: var(--scheme-bright-primary-hover);
+  --x-scheme-muted-hover:  var(--scheme-muted-primary-hover);
+}
+
+.scheme-highlight {
+  --x-scheme:              var(--scheme-highlight);
+  --x-scheme-bright:       var(--scheme-bright-highlight);
+  --x-scheme-muted:        var(--scheme-muted-highlight);
+  --x-scheme-hover:        var(--scheme-highlight-hover);
+  --x-scheme-bright-hover: var(--scheme-bright-highlight-hover);
+  --x-scheme-muted-hover:  var(--scheme-muted-highlight-hover);
+}
+
+.scheme-black {
+  --x-scheme:              var(--scheme-black);
+  --x-scheme-bright:       var(--scheme-bright-black);
+  --x-scheme-muted:        var(--scheme-muted-black);
+  --x-scheme-hover:        var(--scheme-black-hover);
+  --x-scheme-bright-hover: var(--scheme-bright-black-hover);
+  --x-scheme-muted-hover:  var(--scheme-muted-black-hover);
+}
+
+.scheme-red {
+  --x-scheme:              var(--scheme-red);
+  --x-scheme-bright:       var(--scheme-bright-red);
+  --x-scheme-muted:        var(--scheme-muted-red);
+  --x-scheme-hover:        var(--scheme-red-hover);
+  --x-scheme-bright-hover: var(--scheme-bright-red-hover);
+  --x-scheme-muted-hover:  var(--scheme-muted-red-hover);
+}
+
+.scheme-green {
+  --x-scheme:              var(--scheme-green);
+  --x-scheme-bright:       var(--scheme-bright-green);
+  --x-scheme-muted:        var(--scheme-muted-green);
+  --x-scheme-hover:        var(--scheme-green-hover);
+  --x-scheme-bright-hover: var(--scheme-bright-green-hover);
+  --x-scheme-muted-hover:  var(--scheme-muted-green-hover);
+}
+
+.scheme-yellow {
+  --x-scheme:              var(--scheme-yellow);
+  --x-scheme-bright:       var(--scheme-bright-yellow);
+  --x-scheme-muted:        var(--scheme-muted-yellow);
+  --x-scheme-hover:        var(--scheme-yellow-hover);
+  --x-scheme-bright-hover: var(--scheme-bright-yellow-hover);
+  --x-scheme-muted-hover:  var(--scheme-muted-yellow-hover);
+}
+
+.scheme-blue {
+  --x-scheme:              var(--scheme-blue);
+  --x-scheme-bright:       var(--scheme-bright-blue);
+  --x-scheme-muted:        var(--scheme-muted-blue);
+  --x-scheme-hover:        var(--scheme-blue-hover);
+  --x-scheme-bright-hover: var(--scheme-bright-blue-hover);
+  --x-scheme-muted-hover:  var(--scheme-muted-blue-hover);
+}
+
+.scheme-magenta {
+  --x-scheme:              var(--scheme-magenta);
+  --x-scheme-bright:       var(--scheme-bright-magenta);
+  --x-scheme-muted:        var(--scheme-muted-magenta);
+  --x-scheme-hover:        var(--scheme-magenta-hover);
+  --x-scheme-bright-hover: var(--scheme-bright-magenta-hover);
+  --x-scheme-muted-hover:  var(--scheme-muted-magenta-hover);
+}
+
+.scheme-cyan {
+  --x-scheme:              var(--scheme-cyan);
+  --x-scheme-bright:       var(--scheme-bright-cyan);
+  --x-scheme-muted:        var(--scheme-muted-cyan);
+  --x-scheme-hover:        var(--scheme-cyan-hover);
+  --x-scheme-bright-hover: var(--scheme-bright-cyan-hover);
+  --x-scheme-muted-hover:  var(--scheme-muted-cyan-hover);
+}
+
+.scheme-white {
+  --x-scheme:              var(--scheme-white);
+  --x-scheme-bright:       var(--scheme-bright-white);
+  --x-scheme-muted:        var(--scheme-muted-white);
+  --x-scheme-hover:        var(--scheme-white-hover);
+  --x-scheme-bright-hover: var(--scheme-bright-white-hover);
+  --x-scheme-muted-hover:  var(--scheme-muted-white-hover);
+}
