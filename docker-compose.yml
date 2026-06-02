@@ -1,0 +1,7 @@
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - '9090:80'
+    volumes:
+      - .:/usr/share/nginx/html:delegated
