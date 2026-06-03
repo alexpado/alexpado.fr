@@ -513,7 +513,7 @@ hr {
   background-color: var(--scheme-background-lower);
   padding:          2px;
 
-  span:first-child {
+  .label {
     color:            var(--scheme-bright-white);
     background-color: var(--x-scheme);
     border-radius:    0.125em;
@@ -521,7 +521,7 @@ hr {
     font-weight:      bolder;
   }
 
-  span:last-child {
+  .value {
     padding: 0.25em 0.5em;
   }
 }
