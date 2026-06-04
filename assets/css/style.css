@@ -27,13 +27,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Lancelot, sans-serif;
 }
 
+html, body {
+  height:   100dvh;
+  width:    100dvw;
+  overflow: hidden;
+}
+
 body {
-  height:         100dvh;
-  width:          100dvw;
 
   display:        flex;
   flex-direction: column;
-  overflow:       hidden;
 
   main {
     position: relative;
@@ -477,6 +480,11 @@ body {
 }
 
 @media (max-width: 650px) {
+
+  body {
+    font-size: 14px;
+  }
+
   #navigation {
     a {
       flex-direction: column;
